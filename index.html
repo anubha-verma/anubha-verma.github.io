@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="color-scheme" content="dark">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Anubha Verma | Editor and Writer</title>
-<meta name="description" content="Anubha Verma: copy editor, features writer and content quality specialist based in Noida, India.">
+<meta name="description" content="Anubha Verma: copy editor, features writer, and content quality specialist based in Noida, India.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Public+Sans:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#F5F6F8; --surface:#FFFFFF; --ink:#1C2230; --muted:#5B6475;
-  --rule:#D9DDE4; --pencil:#2457D6; --strike:#B4342B;
+  --paper:#14213D; --surface:#1B2A4A; --ink:#F4EFE3; --muted:#B9C0CE;
+    --rule:#2E3D5E; --pencil:#F2B84B; --strike:#E76F51;
   --serif:"Spectral", Georgia, "Times New Roman", serif;
   --sans:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
   --hand:"Caveat", "Comic Sans MS", cursive;
@@ -21,13 +22,13 @@
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#141821; --surface:#1C212C; --ink:#E7EAF0; --muted:#A3ABBA;
-    --rule:#2E3544; --pencil:#86A8FF; --strike:#FF8A80;
+    --paper:#14213D; --surface:#1B2A4A; --ink:#F4EFE3; --muted:#B9C0CE;
+    --rule:#2E3D5E; --pencil:#F2B84B; --strike:#E76F51;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#141821; --surface:#1C212C; --ink:#E7EAF0; --muted:#A3ABBA;
-  --rule:#2E3544; --pencil:#86A8FF; --strike:#FF8A80;
+  --paper:#14213D; --surface:#1B2A4A; --ink:#F4EFE3; --muted:#B9C0CE;
+    --rule:#2E3D5E; --pencil:#F2B84B; --strike:#E76F51;
 }
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth}
@@ -63,8 +64,8 @@ nav.top ul a:hover{color:var(--ink)}
 }
 .hero p.lede{font-size:1.15rem; color:var(--muted); max-width:36rem; margin:0 0 2rem}
 .cta{display:flex; gap:1.25rem; flex-wrap:wrap; align-items:center}
-.btn{display:inline-block; background:var(--ink); color:var(--paper); padding:.7rem 1.25rem; border-radius:4px; text-decoration:none; font-weight:500}
-.btn:hover{background:var(--pencil); color:#fff}
+.btn{display:inline-block; background:var(--pencil); color:var(--paper); padding:.7rem 1.25rem; border-radius:4px; text-decoration:none; font-weight:500}
+.btn:hover{background:var(--ink); color:var(--paper)}
 
 /* Sections */
 section{padding:3.5rem 0; border-top:1px solid var(--rule)}
@@ -83,6 +84,11 @@ h2{font-family:var(--serif); font-weight:600; font-size:1.65rem; line-height:1.3
 .more{margin-top:1.5rem; font-size:.95rem}
 
 /* Editing demo */
+.tabs{display:flex; flex-wrap:wrap; gap:.25rem; border-bottom:1px solid var(--rule); margin-top:1.5rem}
+.tabs [role=tab]{font:inherit; font-size:.95rem; background:transparent; color:var(--muted); border:0; border-bottom:3px solid transparent; padding:.6rem .9rem; margin-bottom:-1px; cursor:pointer}
+.tabs [role=tab]:hover{color:var(--ink)}
+.tabs [role=tab][aria-selected=true]{color:var(--ink); border-bottom-color:var(--pencil); font-weight:500}
+.tabpanel .demo{margin-top:1.25rem}
 .demo{background:var(--surface); border:1px solid var(--rule); border-radius:6px; padding:1.5rem 1.5rem 1.25rem; margin-top:1.5rem}
 .toggle{display:inline-flex; border:1px solid var(--rule); border-radius:4px; overflow:hidden; margin-bottom:1.25rem}
 .toggle button{font:inherit; font-size:.9rem; background:transparent; color:var(--muted); border:0; padding:.45rem .9rem; cursor:pointer}
@@ -104,7 +110,7 @@ h2{font-family:var(--serif); font-weight:600; font-size:1.65rem; line-height:1.3
 .story{max-width:38rem; margin:0 0 2rem}
 .story p{margin:0 0 1rem}
 .story p:last-child{margin:0}
-.sub{font-family:var(--serif); font-weight:600; font-size:1.2rem; margin:2.5rem 0 1rem}
+.sub{margin:3.5rem 0 1.25rem}
 .edit-points{display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:1.5rem 2rem; margin:0 0 .5rem}
 .edit-points h3{font-size:1rem; font-weight:600; margin:0 0 .25rem}
 .edit-points p{margin:0; color:var(--muted); font-size:.97rem}
@@ -157,8 +163,8 @@ footer{border-top:1px solid var(--rule); padding:1.5rem 0 2rem; font-size:.88rem
 </nav>
 
 <header class="hero" id="top">
-  <h1>I make content clear, correct and <span class="edit"><del>readable</del><ins>accessible</ins></span>&nbsp;for every reader.</h1>
-  <p class="lede">Editor, features writer and content quality specialist with experience since 2008 across digital publishing, K‑8 education and enterprise content. I work in AP and Chicago style, and I check that what I edit works for screen-reader users too.</p>
+  <h1>I make content clear, correct, and <span class="edit"><del>readable</del><ins>accessible</ins></span>&nbsp;for every reader.</h1>
+  <p class="lede">Editor, features writer, and content quality specialist with experience since 2008 across digital publishing, K‑8 education, and enterprise content. I work in AP and Chicago style, and I check that what I edit works for screen-reader users too.</p>
   <div class="cta">
     <a class="btn" href="mailto:anu.blueocean@gmail.com">Email me</a>
     <a href="#writing">Read my writing</a>
@@ -171,17 +177,22 @@ footer{border-top:1px solid var(--rule); padding:1.5rem 0 2rem; font-size:.88rem
     <p>These days, I am shifting gears between tech and automotive features as an editor at SlashGear.</p>
     <p>Some eons ago, I was working at S. Chand’s Mylestone editing K‑8 print and digital materials. I also developed and helped maintain the in-house style guide to bring consistency across the whole team.</p>
     <p>Then Deloitte came knocking, and later Johnson &amp; Johnson. Suddenly, textbooks were out and I was knee-deep in training modules, e-learning content, PPTs, PDFs, Figma workflows, gamified courses, accessible content — you name it, and I have probably reviewed it! This is also where I learned to “listen” to a page the way a low-vision user would via a screen reader. Tools like JAWS, NVDA, and VoiceOver would read every unlabeled button and every vague “click here” out loud. Imagine hearing “button, button, button” with no idea what any of them do. Trust me, it’s not pretty. Turns out, a color that fails a contrast check is just as bad as a dangling modifier. I’ve caught (and fixed) more than my fair share of both.</p>
-    <p>Honestly, if it has words in it, I've probably edited something like it. Need a second pair of eyes? I'm just <a href="mailto:anu.blueocean@gmail.com">an email away</a>.</p>
+    <p>Honestly, if it has words in it, I've probably edited something like it. Need a second pair of eyes? I'm just an <a href="mailto:anu.blueocean@gmail.com">email</a> away.</p>
   </div>
 
-  <h3 class="sub">How I approach a page</h3>
+  <h2 class="sub">How I approach a page</h2>
   <div class="edit-points">
-    <div><h3>Accuracy first</h3><p>Facts, figures, names and prices checked against primary sources.</p></div>
+    <div><h3>Accuracy first</h3><p>Facts, figures, names, and prices checked against primary sources.</p></div>
     <div><h3>Style, consistently</h3><p>AP or Chicago, plus the house guide, applied the same way on every page.</p></div>
-    <div><h3>Built for every reader</h3><p>Headings, link text and alt text that hold up for search engines and screen readers.</p></div>
+    <div><h3>Built for every reader</h3><p>Headings, link text, and alt text that hold up for search engines and screen readers.</p></div>
   </div>
 
-  <div class="demo" data-view="marked" id="demo">
+  <div class="tabs" role="tablist" aria-label="Editing samples">
+    <button type="button" role="tab" id="tab-s26" aria-selected="true" aria-controls="panel-s26">Tech feature</button>
+    <button type="button" role="tab" id="tab-elearn" aria-selected="false" aria-controls="panel-elearn" tabindex="-1">E-learning and accessibility</button>
+  </div>
+  <div class="tabpanel" role="tabpanel" id="panel-s26" aria-labelledby="tab-s26">
+    <div class="demo" data-view="marked">
     <div class="toggle" role="group" aria-label="Choose view">
       <button type="button" aria-pressed="true" data-view="marked">Show edits</button>
       <button type="button" aria-pressed="false" data-view="clean">Clean copy</button>
@@ -195,19 +206,46 @@ footer{border-top:1px solid var(--rule); padding:1.5rem 0 2rem; font-size:.88rem
     <div class="notes">
       What changed and why:
       <ul>
-        <li>Fact-checked every figure against GSMArena's tests and the official Google Pixel and Samsung spec pages: added the calls category the draft missed, corrected the Pixel's gaming time (19 to 13 minutes) and fixed the battery gap (500 to 550 mAh).</li>
+        <li>Fact-checked every figure against GSMArena's tests and the official Google Pixel and Samsung spec pages: added the calls category the draft missed, corrected the Pixel's gaming time (19 to 13 minutes), and fixed the battery gap (500 to 550 mAh).</li>
         <li>Made names and numbers consistent: "Pixel 11" to "Pixel 11 Pro," "Phone Arena" to "PhoneArena," and "6 hours and 37 minutes" to match every other figure.</li>
         <li>Fixed punctuation: a stray space and comma became a colon, and a colon now introduces GSMArena's counterpoint. Adding "with" lets the sentence read correctly around the em dashes.</li>
-        <li>Tightened the prose by cutting filler such as "definitely," "we'd like to remind readers" and a repeated "of battery life."</li>
+        <li>Tightened the prose by cutting filler such as "definitely," "we'd like to remind readers," and a repeated "of battery life."</li>
       </ul>
     </div>
   </div>
-  <p class="caption">From a SlashGear battery-life comparison: the writer's draft and my edit.</p>
+    <p class="caption">From a SlashGear battery-life comparison: the writer's draft and my edit.</p>
+  </div>
+  <div class="tabpanel" role="tabpanel" id="panel-elearn" aria-labelledby="tab-elearn" hidden>
+    <div class="demo" data-view="marked">
+      <div class="toggle" role="group" aria-label="Choose view">
+        <button type="button" aria-pressed="true" data-view="marked">Show edits</button>
+        <button type="button" aria-pressed="false" data-view="clean">Clean copy</button>
+      </div>
+      <div class="copy">
+        <p class="copy-h">Choose your digital persona pathway</p>
+        <p>Congratulations! <del>You have successfully</del> <ins>You've</ins> completed the <del>Self Assessment</del> <ins>self-assessment</ins>, a powerful step <del>towards</del><ins>toward</ins> accelerating your career growth.</p>
+        <p>Download your skills report and reflect on the <del>below</del> <ins>following</ins> questions with your People Leader during your <del>Development Conversation</del> <ins>development conversation</ins>.</p>
+        <p>Now<del>,</del> you<del> are</del><ins>'re</ins> ready to <del>identify and </del>explore <ins>the </ins>resources, tools, content<ins>,</ins> and experiences that will kickstart your learning journey. In the Learning Channel, you'll find three <del>different </del>digital personas<del> with personalized and curated content to help you reach your learning goals considering your current role</del><ins>, each with content curated for your current role</ins>.</p>
+        <p><del>Click on the green button below to find out more about the Digital Contributor journey. To explore other personas click here.</del> <ins>Select <strong>Explore the Digital Contributor journey</strong> to learn more. To compare all three, see the persona overview.</ins></p>
+      </div>
+      <div class="notes">
+        What changed and why:
+        <ul>
+          <li>Accessibility: "the green button below" relies on color and position, which screen-reader and color-blind users can't perceive (WCAG 1.3.3 and 1.4.1). The button is now named by its label.</li>
+          <li>Accessibility: replaced "click here" with link text that says where it goes (WCAG 2.4.4), and "below" with "following," since a screen reader has no "below."</li>
+          <li>Used "Select" instead of "Click" so the instruction works for keyboard and touch users too.</li>
+          <li>Applied house style: generic terms in lowercase, "toward" for US English, the serial comma, and a contraction for a warmer tone.</li>
+          <li>Tightened the copy by cutting "successfully," "different," "identify and," and a long, wordy phrase about personalized content.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="caption">A representative recreation of my e-learning QA work for a global healthcare company. Product and company details have been changed to protect client confidentiality.</p>
+  </div>
 </section>
 
 <section id="writing" aria-labelledby="writing-h">
   <h2 id="writing-h">Selected writing</h2>
-  <p class="intro">Bylined features and explainers for consumer tech, automotive and career audiences, written for search without losing the reader.</p>
+  <p class="intro">Bylined features and explainers for consumer tech, automotive, and career audiences, written for search without losing the reader.</p>
   <ul class="samples">
     <li>
       <p class="pub">SlashGear · Cars</p>
@@ -235,32 +273,42 @@ footer{border-top:1px solid var(--rule); padding:1.5rem 0 2rem; font-size:.88rem
 
 <section id="experience" aria-labelledby="exp-h">
   <h2 id="exp-h">Experience</h2>
-  <p class="intro">Editing, writing and content quality work for publishers, education companies and global enterprises.</p>
+  <p class="intro">Editing, writing, and content quality work for publishers, education companies, and global enterprises.</p>
   <ol class="timeline" reversed>
     <li class="now">
-      <div class="when">Mar 2024 to present</div>
-      <h3>Features Writer and Editor <span>at SlashGear (Static Media), freelance</span></h3>
-      <p>Write and edit in-depth tech and automotive features in AP style, publish in WordPress and optimize keywords and metadata for search.</p>
+      <div class="when">Feb 2024 to present</div>
+      <h3>Features Editor <span>at SlashGear (Static Media), freelance</span></h3>
+      <p>Promoted from Features Writer (Feb to Oct 2024). Edit technology, tools, and automotive features in AP style, write SEO titles and meta descriptions, publish in WordPress, and manage workflow and scheduling in Trello.</p>
+    </li>
+    <li class="now">
+      <div class="when">Feb 2023 to present</div>
+      <h3>Freelance Writer <span>at Indeed</span></h3>
+      <p>Write career-advice explainers and career profiles for the Indeed Career Guide, researched for accuracy and optimized for search.</p>
     </li>
     <li>
       <div class="when">Jun 2024 to Sep 2025</div>
-      <h3>UX/UI Quality Analyst <span>at Johnson &amp; Johnson, contract</span></h3>
-      <p>Reviewed e-learning assets and enterprise training content for clarity, structure, brand compliance and WCAG AA accessibility, including screen-reader compatibility.</p>
+      <h3>Learning Compliance Specialist <span>at Johnson &amp; Johnson</span></h3>
+      <p>Copy edited e-learning assets and training content for clarity, brand compliance, and WCAG AA accessibility, including screen-reader compatibility, and tested training materials for functional accuracy.</p>
     </li>
     <li>
       <div class="when">Sep 2019 to Dec 2023</div>
-      <h3>UX/UI Quality Analyst <span>at Deloitte USI, contract</span></h3>
-      <p>Reviewed and refined training modules, gamified courses and documents for Learning Design Services, ran content audits, enforced style guides and supported large-scale content migrations and redesigns.</p>
+      <h3>Editorial Consultant <span>at Deloitte India (Offices of the US)</span></h3>
+      <p>Created and refined training modules, gamified courses, and documents for Learning Design Services, aligned content strategy and voice with stakeholders, enforced style guides and brand standards, and resolved accessibility barriers in websites and digital products.</p>
     </li>
     <li>
       <div class="when">Oct 2016 to Jun 2019</div>
       <h3>Editor <span>at Mylestone (S. Chand)</span></h3>
-      <p>Edited K‑8 digital and print materials for accuracy and age-appropriateness, developed the in-house language and style guide, wrote pre-primary scripts and coordinated voice talent and post-production.</p>
+      <p>Edited K‑8 digital and print materials for accuracy and age-appropriateness, developed the in-house language and style guide, wrote pre-primary scripts, and coordinated voice talent and post-production.</p>
     </li>
     <li>
-      <div class="when">Oct 2008 to Oct 2016</div>
+      <div class="when">Mar 2011 to Oct 2016</div>
       <h3>Content Lead <span>at QA InfoTech (now Qualitest)</span></h3>
-      <p>Led content QA projects end to end for clients including Harvard Business Publishing, Macmillan and SAI360, and managed virtual teams of subject experts.</p>
+      <p>Led content QA projects end to end for clients including Harvard Business Publishing, Macmillan, and SAI360, managed a virtual team of subject matter experts, and trained new recruits.</p>
+    </li>
+    <li>
+      <div class="when">Oct 2008 to Feb 2011</div>
+      <h3>Subject Matter Expert <span>at QA InfoTech, freelance</span></h3>
+      <p>Evaluated Business English assessments and high school transcripts, and trained new recruits.</p>
     </li>
   </ol>
 </section>
@@ -274,7 +322,7 @@ footer{border-top:1px solid var(--rule); padding:1.5rem 0 2rem; font-size:.88rem
       <ul>
         <li>Copy editing and proofreading</li>
         <li>AP and Chicago style</li>
-        <li>Features, copywriting and technical writing</li>
+        <li>Features, copywriting, and technical writing</li>
         <li>SEO writing and optimization</li>
         <li>K‑8 and subject-specialist editing</li>
       </ul>
@@ -285,7 +333,7 @@ footer{border-top:1px solid var(--rule); padding:1.5rem 0 2rem; font-size:.88rem
         <li>Content design for the web</li>
         <li>Content audits and structured content</li>
         <li>Large-scale content refreshes and migrations</li>
-        <li>Work with UX, product and marketing teams</li>
+        <li>Work with UX, product, and marketing teams</li>
       </ul>
     </div>
     <div>
@@ -308,9 +356,10 @@ footer{border-top:1px solid var(--rule); padding:1.5rem 0 2rem; font-size:.88rem
 </section>
 
 <section class="contact" id="contact" aria-labelledby="contact-h">
-  <h2 id="contact-h">Have something that needs a careful editor?</h2>
-  <p class="intro">I'm open to full-time, contract and freelance copy editing, editing and writing roles.</p>
+  <h2 id="contact-h">Looking for a careful editor?</h2>
+  <p class="intro">I'm open to full-time, contract, and freelance copy editing, editing, and writing roles.</p>
   <p class="email"><a href="mailto:anu.blueocean@gmail.com">anu.blueocean@gmail.com</a></p>
+  <p class="social">Or find me on <a href="https://www.linkedin.com/in/av-av/">LinkedIn</a>.</p>
 </section>
 
 <footer>Anubha Verma · Noida, India</footer>
@@ -318,12 +367,31 @@ footer{border-top:1px solid var(--rule); padding:1.5rem 0 2rem; font-size:.88rem
 
 <script>
 (function(){
-  var demo=document.getElementById('demo');
-  var btns=demo.querySelectorAll('.toggle button');
-  btns.forEach(function(b){
-    b.addEventListener('click',function(){
-      demo.setAttribute('data-view',b.dataset.view);
-      btns.forEach(function(x){x.setAttribute('aria-pressed', x===b ? 'true':'false');});
+  document.querySelectorAll('.demo').forEach(function(demo){
+    var btns=demo.querySelectorAll('.toggle button');
+    btns.forEach(function(b){
+      b.addEventListener('click',function(){
+        demo.setAttribute('data-view',b.dataset.view);
+        btns.forEach(function(x){x.setAttribute('aria-pressed', x===b ? 'true':'false');});
+      });
+    });
+  });
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  function select(t){
+    tabs.forEach(function(x){
+      var on=x===t;
+      x.setAttribute('aria-selected',on?'true':'false');
+      x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t);});
+    t.addEventListener('keydown',function(e){
+      var n=null;
+      if(e.key==='ArrowRight')n=tabs[(i+1)%tabs.length];
+      if(e.key==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];
+      if(n){e.preventDefault();select(n);n.focus();}
     });
   });
 })();
