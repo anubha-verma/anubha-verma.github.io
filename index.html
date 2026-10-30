@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anubha Verma | Editor and Writer</title>
+<meta name="description" content="Anubha Verma: copy editor, features writer and content quality specialist based in Noida, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Public+Sans:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F6F8; --surface:#FFFFFF; --ink:#1C2230; --muted:#5B6475;
+  --rule:#D9DDE4; --pencil:#2457D6; --strike:#B4342B;
+  --serif:"Spectral", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --hand:"Caveat", "Comic Sans MS", cursive;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141821; --surface:#1C212C; --ink:#E7EAF0; --muted:#A3ABBA;
+    --rule:#2E3544; --pencil:#86A8FF; --strike:#FF8A80;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141821; --surface:#1C212C; --ink:#E7EAF0; --muted:#A3ABBA;
+  --rule:#2E3544; --pencil:#86A8FF; --strike:#FF8A80;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:1.0625rem; line-height:1.6; -webkit-font-smoothing:antialiased}
+a{color:var(--pencil); text-underline-offset:3px; text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--pencil); outline-offset:3px; border-radius:2px}
+img{max-width:100%}
+
+.wrap{max-width:46rem; margin:0 auto; padding:0 1.5rem}
+
+/* Nav */
+nav.top{display:flex; justify-content:space-between; align-items:baseline; gap:1rem; flex-wrap:wrap; padding:1.75rem 0 0}
+nav.top .name{font-family:var(--serif); font-weight:600; font-size:1.1rem; color:var(--ink); text-decoration:none}
+nav.top ul{list-style:none; margin:0; padding:0; display:flex; gap:1.25rem; flex-wrap:wrap; font-size:.95rem}
+nav.top ul a{color:var(--muted); text-decoration:none}
+nav.top ul a:hover{color:var(--ink)}
+
+/* Hero */
+.hero{padding:5.5rem 0 4rem}
+.hero h1{font-family:var(--serif); font-weight:400; font-size:clamp(2.1rem, 6vw, 3.4rem); line-height:1.6; letter-spacing:-.01em; margin:0 0 1.75rem}
+.edit{position:relative; white-space:nowrap}
+.edit del{text-decoration:none; position:relative; color:var(--muted)}
+.edit del::after{content:""; position:absolute; left:-2%; right:-2%; top:52%; height:3px; background:var(--strike); transform:rotate(-4deg) scaleX(0); transform-origin:left; border-radius:2px; animation:strike .5s .5s ease-out forwards}
+.edit ins{position:absolute; left:50%; bottom:82%; transform:translateX(-50%); text-decoration:none; font-family:var(--hand); color:var(--pencil); font-size:.62em; line-height:1; white-space:nowrap; opacity:0; animation:appear .4s 1.05s ease-out forwards}
+.edit ins::before{content:"‸"; position:absolute; left:50%; top:70%; transform:translateX(-50%); font-family:var(--sans); font-size:.9em}
+@keyframes strike{to{transform:rotate(-4deg) scaleX(1)}}
+@keyframes appear{to{opacity:1}}
+@media (prefers-reduced-motion: reduce){
+  .edit del::after{animation:none; transform:rotate(-4deg) scaleX(1)}
+  .edit ins{animation:none; opacity:1}
+}
+.hero p.lede{font-size:1.15rem; color:var(--muted); max-width:36rem; margin:0 0 2rem}
+.cta{display:flex; gap:1.25rem; flex-wrap:wrap; align-items:center}
+.btn{display:inline-block; background:var(--ink); color:var(--paper); padding:.7rem 1.25rem; border-radius:4px; text-decoration:none; font-weight:500}
+.btn:hover{background:var(--pencil); color:#fff}
+
+/* Sections */
+section{padding:3.5rem 0; border-top:1px solid var(--rule)}
+h2{font-family:var(--serif); font-weight:600; font-size:1.65rem; line-height:1.3; margin:0 0 .5rem}
+.intro{color:var(--muted); margin:0 0 2rem; max-width:38rem}
+
+/* Samples */
+.samples{list-style:none; margin:0; padding:0}
+.samples li{padding:1.4rem 0; border-bottom:1px solid var(--rule)}
+.samples li:first-child{padding-top:0}
+.samples .pub{font-size:.9rem; color:var(--muted); margin:0 0 .2rem}
+.samples h3{font-family:var(--serif); font-weight:600; font-size:1.3rem; line-height:1.35; margin:0 0 .35rem}
+.samples h3 a{color:var(--ink); text-decoration:none; background-image:linear-gradient(var(--pencil),var(--pencil)); background-size:0 2px; background-position:0 100%; background-repeat:no-repeat; transition:background-size .25s}
+.samples h3 a:hover, .samples h3 a:focus-visible{background-size:100% 2px}
+.samples p.desc{margin:0; color:var(--muted)}
+.more{margin-top:1.5rem; font-size:.95rem}
+
+/* Editing demo */
+.demo{background:var(--surface); border:1px solid var(--rule); border-radius:6px; padding:1.5rem 1.5rem 1.25rem; margin-top:1.5rem}
+.toggle{display:inline-flex; border:1px solid var(--rule); border-radius:4px; overflow:hidden; margin-bottom:1.25rem}
+.toggle button{font:inherit; font-size:.9rem; background:transparent; color:var(--muted); border:0; padding:.45rem .9rem; cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink); color:var(--paper)}
+.copy{font-family:var(--serif); font-size:1.1rem; line-height:2}
+.copy p{margin:0 0 1rem}
+.copy p:last-child{margin:0}
+.copy .copy-h{font-family:var(--sans); font-weight:600; font-size:1rem; margin-bottom:.5rem}
+.copy del{color:var(--strike); text-decoration:line-through; text-decoration-thickness:2px}
+.copy ins{color:var(--pencil); text-decoration:none; font-family:var(--hand); font-size:1.2em; line-height:1}
+.demo[data-view="marked"] .copy del + ins{margin-left:.15em}
+.demo[data-view="clean"] .copy del{display:none}
+.demo[data-view="clean"] .copy ins{font-family:var(--serif); font-size:1em; color:var(--ink)}
+.notes{margin:1.25rem 0 0; padding:1rem 0 0; border-top:1px dashed var(--rule); font-size:.92rem; color:var(--muted)}
+.demo[data-view="clean"] .notes{display:none}
+.notes ul{margin:.4rem 0 0; padding-left:1.1rem}
+.caption{font-size:.88rem; color:var(--muted); margin:.75rem 0 0}
+
+.story{max-width:38rem; margin:0 0 2rem}
+.story p{margin:0 0 1rem}
+.story p:last-child{margin:0}
+.sub{font-family:var(--serif); font-weight:600; font-size:1.2rem; margin:2.5rem 0 1rem}
+.edit-points{display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:1.5rem 2rem; margin:0 0 .5rem}
+.edit-points h3{font-size:1rem; font-weight:600; margin:0 0 .25rem}
+.edit-points p{margin:0; color:var(--muted); font-size:.97rem}
+
+/* Experience timeline */
+.timeline{list-style:none; margin:0; padding:0; border-left:2px solid var(--rule)}
+.timeline li{position:relative; padding:0 0 2rem 1.5rem}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:""; position:absolute; left:-7px; top:.55rem; width:12px; height:12px; border-radius:50%; background:var(--paper); border:2px solid var(--muted)}
+.timeline li.now::before{border-color:var(--pencil); background:var(--pencil)}
+.timeline .when{font-size:.9rem; color:var(--muted)}
+.timeline h3{font-size:1.08rem; font-weight:600; margin:.1rem 0 .3rem; line-height:1.4}
+.timeline h3 span{font-weight:400; color:var(--muted)}
+.timeline p{margin:0; color:var(--ink)}
+
+/* Skills */
+.skills{display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:2rem}
+.skills h3{font-family:var(--serif); font-weight:600; font-size:1.12rem; margin:0 0 .5rem}
+.skills ul{margin:0; padding-left:1.1rem; color:var(--muted)}
+.skills li{margin:.2rem 0}
+.tools{margin-top:2rem; color:var(--muted)}
+.tools strong{color:var(--ink); font-weight:600}
+
+.creds p{margin:.25rem 0}
+
+/* Contact */
+.contact{padding:4rem 0 5rem}
+.contact h2{font-size:clamp(1.8rem,5vw,2.4rem); font-weight:400}
+.contact .email{font-family:var(--serif); font-size:clamp(1.15rem,4vw,1.5rem); word-break:break-word}
+footer{border-top:1px solid var(--rule); padding:1.5rem 0 2rem; font-size:.88rem; color:var(--muted)}
+
+@media (max-width:540px){
+  .hero{padding:3.5rem 0 3rem}
+  .demo{padding:1.25rem 1rem}
+  .copy{font-size:1.05rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="top" aria-label="Main">
+  <a class="name" href="#top">Anubha Verma</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <h1>I make content clear, correct and <span class="edit"><del>readable</del><ins>accessible</ins></span>&nbsp;for every reader.</h1>
+  <p class="lede">Editor, features writer and content quality specialist with experience since 2008 across digital publishing, K‑8 education and enterprise content. I work in AP and Chicago style, and I check that what I edit works for screen-reader users too.</p>
+  <div class="cta">
+    <a class="btn" href="mailto:anu.blueocean@gmail.com">Email me</a>
+    <a href="#writing">Read my writing</a>
+  </div>
+</header>
+
+<section id="about" aria-labelledby="about-h">
+  <h2 id="about-h">About me</h2>
+  <div class="story">
+    <p>These days, I am shifting gears between tech and automotive features as an editor at SlashGear.</p>
+    <p>Some eons ago, I was working at S. Chand’s Mylestone editing K‑8 print and digital materials. I also developed and helped maintain the in-house style guide to bring consistency across the whole team.</p>
+    <p>Then Deloitte came knocking, and later Johnson &amp; Johnson. Suddenly, textbooks were out and I was knee-deep in training modules, e-learning content, PPTs, PDFs, Figma workflows, gamified courses, accessible content — you name it, and I have probably reviewed it! This is also where I learned to “listen” to a page the way a low-vision user would via a screen reader. Tools like JAWS, NVDA, and VoiceOver would read every unlabeled button and every vague “click here” out loud. Imagine hearing “button, button, button” with no idea what any of them do. Trust me, it’s not pretty. Turns out, a color that fails a contrast check is just as bad as a dangling modifier. I’ve caught (and fixed) more than my fair share of both.</p>
+    <p>Honestly, if it has words in it, I've probably edited something like it. Need a second pair of eyes? I'm just <a href="mailto:anu.blueocean@gmail.com">an email away</a>.</p>
+  </div>
+
+  <h3 class="sub">How I approach a page</h3>
+  <div class="edit-points">
+    <div><h3>Accuracy first</h3><p>Facts, figures, names and prices checked against primary sources.</p></div>
+    <div><h3>Style, consistently</h3><p>AP or Chicago, plus the house guide, applied the same way on every page.</p></div>
+    <div><h3>Built for every reader</h3><p>Headings, link text and alt text that hold up for search engines and screen readers.</p></div>
+  </div>
+
+  <div class="demo" data-view="marked" id="demo">
+    <div class="toggle" role="group" aria-label="Choose view">
+      <button type="button" aria-pressed="true" data-view="marked">Show edits</button>
+      <button type="button" aria-pressed="false" data-view="clean">Clean copy</button>
+    </div>
+    <div class="copy">
+      <p class="copy-h">Samsung Galaxy S26</p>
+      <p>The Galaxy S26 sits under the S26 Ultra with a <em>smaller battery</em><del> ,</del><ins>:</ins> 4,300 mAh to the Ultra's 5,000 mAh. Samsung still advertises it as having the same 31 hours, max, of battery life during video playback. How does that play out in testing? Once again, <del>each source testing this gets</del> <ins>the sources get</ins> differing results.</p>
+      <p>GSMArena's battery testing of <em>the S26</em> shows it getting less battery life in every category compared to the <em>Pixel 11 Pro</em>, with <del>one exception: gaming</del> <ins>two exceptions: calls and gaming</ins>. The S26 gets <ins>27 hours and 37 minutes in calls and </ins>9 hours and 27 minutes <del>there</del> <ins>in gaming,</ins> while the Pixel 11<ins> Pro</ins> manages <ins>23 hours and 50 minutes and </ins>9 hours and <del>19</del><ins>13</ins> minutes<ins>, respectively</ins>.</p>
+      <p><em><del>Phone Arena</del><ins>PhoneArena</ins></em> gives the S26 first place in every category but video playback; the Pixel 11 Pro manages 11 hours and 4 minutes to the Galaxy S26's 8 hours and 54 minutes. It also gives the Galaxy S26 better overall battery life at 6 hours <ins>and </ins>37 minutes versus the Pixel 11 Pro's 5 hours and 44 minutes<del> of battery life</del>, although GSMArena disputes this<del>;</del><ins>: in its testing,</ins> the Pixel 11 Pro endures 15 hours and 38 minutes overall compared to the S26's 15 hours and 20 minutes. <del>Although the race is definitely much closer here, we'd like to remind readers that the S26 has a <em>battery</em> that's 500 mAh less than the <em>Pixel 11 Pro</em>.</del> <ins>The race is much closer here, and it's worth remembering that the S26's <em>battery</em> is 550 mAh smaller than the <em>Pixel 11 Pro's</em>.</ins> Typically, bigger, premium pro versions of phones have better battery life, so it's impressive that a non-pro flagship can compete <ins>with </ins>— and sometimes beat — the Pixel 11 Pro.</p>
+    </div>
+    <div class="notes">
+      What changed and why:
+      <ul>
+        <li>Fact-checked every figure against GSMArena's tests and the official Google Pixel and Samsung spec pages: added the calls category the draft missed, corrected the Pixel's gaming time (19 to 13 minutes) and fixed the battery gap (500 to 550 mAh).</li>
+        <li>Made names and numbers consistent: "Pixel 11" to "Pixel 11 Pro," "Phone Arena" to "PhoneArena," and "6 hours and 37 minutes" to match every other figure.</li>
+        <li>Fixed punctuation: a stray space and comma became a colon, and a colon now introduces GSMArena's counterpoint. Adding "with" lets the sentence read correctly around the em dashes.</li>
+        <li>Tightened the prose by cutting filler such as "definitely," "we'd like to remind readers" and a repeated "of battery life."</li>
+      </ul>
+    </div>
+  </div>
+  <p class="caption">From a SlashGear battery-life comparison: the writer's draft and my edit.</p>
+</section>
+
+<section id="writing" aria-labelledby="writing-h">
+  <h2 id="writing-h">Selected writing</h2>
+  <p class="intro">Bylined features and explainers for consumer tech, automotive and career audiences, written for search without losing the reader.</p>
+  <ul class="samples">
+    <li>
+      <p class="pub">SlashGear · Cars</p>
+      <h3><a href="https://www.slashgear.com/1672849/cars-with-red-interiors/">10 Cars With Red Interiors You Can Buy In 2024</a></h3>
+      <p class="desc">A buyer's guide spanning a $32,600 Mazda to a $32 million Rolls-Royce, pairing trim names and pricing with specs and the feel of each cabin.</p>
+    </li>
+    <li>
+      <p class="pub">Indeed Career Guide · Pay and salary</p>
+      <h3><a href="https://www.indeed.com/career-advice/pay-salary/retention-bonus">What Is a Retention Bonus? (Plus How They Work and Benefits)</a></h3>
+      <p class="desc">An explainer covering how retention agreements are structured, how payouts and taxes work, and how to decide whether to accept one.</p>
+    </li>
+    <li>
+      <p class="pub">Indeed Career Guide · Career development</p>
+      <h3><a href="https://www.indeed.com/career-advice/career-development/baccalaureate-degree">What Is a Baccalaureate Degree?</a></h3>
+      <p class="desc">A plain-language guide to a term that confuses many students, written for readers weighing their education options.</p>
+    </li>
+    <li>
+      <p class="pub">Indeed Career Guide · Finding a job</p>
+      <h3><a href="https://www.indeed.com/career-advice/finding-a-job/what-does-early-childhood-educator-do">What Does an Early Childhood Educator Do?</a></h3>
+      <p class="desc">A career profile drawing on my years editing K‑8 and pre-primary learning content.</p>
+    </li>
+  </ul>
+  <p class="more">More of my work: my author pages at <a href="https://www.slashgear.com/author/anubhaverma/">SlashGear</a> and <a href="https://www.indeed.com/career-advice/author/anubha-verma">Indeed Career Guide</a></p>
+</section>
+
+<section id="experience" aria-labelledby="exp-h">
+  <h2 id="exp-h">Experience</h2>
+  <p class="intro">Editing, writing and content quality work for publishers, education companies and global enterprises.</p>
+  <ol class="timeline" reversed>
+    <li class="now">
+      <div class="when">Mar 2024 to present</div>
+      <h3>Features Writer and Editor <span>at SlashGear (Static Media), freelance</span></h3>
+      <p>Write and edit in-depth tech and automotive features in AP style, publish in WordPress and optimize keywords and metadata for search.</p>
+    </li>
+    <li>
+      <div class="when">Jun 2024 to Sep 2025</div>
+      <h3>UX/UI Quality Analyst <span>at Johnson &amp; Johnson, contract</span></h3>
+      <p>Reviewed e-learning assets and enterprise training content for clarity, structure, brand compliance and WCAG AA accessibility, including screen-reader compatibility.</p>
+    </li>
+    <li>
+      <div class="when">Sep 2019 to Dec 2023</div>
+      <h3>UX/UI Quality Analyst <span>at Deloitte USI, contract</span></h3>
+      <p>Reviewed and refined training modules, gamified courses and documents for Learning Design Services, ran content audits, enforced style guides and supported large-scale content migrations and redesigns.</p>
+    </li>
+    <li>
+      <div class="when">Oct 2016 to Jun 2019</div>
+      <h3>Editor <span>at Mylestone (S. Chand)</span></h3>
+      <p>Edited K‑8 digital and print materials for accuracy and age-appropriateness, developed the in-house language and style guide, wrote pre-primary scripts and coordinated voice talent and post-production.</p>
+    </li>
+    <li>
+      <div class="when">Oct 2008 to Oct 2016</div>
+      <h3>Content Lead <span>at QA InfoTech (now Qualitest)</span></h3>
+      <p>Led content QA projects end to end for clients including Harvard Business Publishing, Macmillan and SAI360, and managed virtual teams of subject experts.</p>
+    </li>
+  </ol>
+</section>
+
+<section aria-labelledby="skills-h">
+  <h2 id="skills-h">Skills</h2>
+  <p class="intro">Where editing meets content strategy and accessibility.</p>
+  <div class="skills">
+    <div>
+      <h3>Writing and editing</h3>
+      <ul>
+        <li>Copy editing and proofreading</li>
+        <li>AP and Chicago style</li>
+        <li>Features, copywriting and technical writing</li>
+        <li>SEO writing and optimization</li>
+        <li>K‑8 and subject-specialist editing</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Content strategy</h3>
+      <ul>
+        <li>Content design for the web</li>
+        <li>Content audits and structured content</li>
+        <li>Large-scale content refreshes and migrations</li>
+        <li>Work with UX, product and marketing teams</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Accessibility and quality</h3>
+      <ul>
+        <li>WCAG and Section 508 testing</li>
+        <li>Screen-reader testing with JAWS and NVDA</li>
+        <li>Functional testing of learning content</li>
+        <li>Defect tracking in JIRA</li>
+      </ul>
+    </div>
+  </div>
+  <p class="tools"><strong>Tools:</strong> WordPress, Google Docs, Surfer SEO, Trello, Notion, Slack, Figma, Canva, Articulate Storyline, Rise 360, Camtasia, Microsoft 365 Copilot</p>
+</section>
+
+<section class="creds" aria-labelledby="ed-h">
+  <h2 id="ed-h">Education</h2>
+  <p>B.A. (Hons.) English Language and Literature, St. Bede's College, Shimla</p>
+  <p>Certified Instructional Design Practitioner's Course, KPMG Learning Academy</p>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <h2 id="contact-h">Have something that needs a careful editor?</h2>
+  <p class="intro">I'm open to full-time, contract and freelance copy editing, editing and writing roles.</p>
+  <p class="email"><a href="mailto:anu.blueocean@gmail.com">anu.blueocean@gmail.com</a></p>
+</section>
+
+<footer>Anubha Verma · Noida, India</footer>
+</div>
+
+<script>
+(function(){
+  var demo=document.getElementById('demo');
+  var btns=demo.querySelectorAll('.toggle button');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      demo.setAttribute('data-view',b.dataset.view);
+      btns.forEach(function(x){x.setAttribute('aria-pressed', x===b ? 'true':'false');});
+    });
+  });
+})();
+</script>
+</body>
+</html>
